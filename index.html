@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" type="module"></script>
+    <script src="./contatos.js" type="module"></script>
+    <title>Meus Contatos</title>
+</head>
+<body>
+
+    <div id="mensagem"></div>
+
+    <p class="page-title">Meus Contatos</p>
+    <p class="page-subtitle">Fatec 2026 - Projeto Professor Fernando Leonid</p>
+
+    <div class="card-form">
+        <h3>Novo contato</h3>
+        <form>
+            <div class="form-grid">
+
+                <div class="field full">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Maria Silva">
+                </div>
+
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="maria@email.com">
+                </div>
+
+                <div class="field">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular" placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="field">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo">
+                </div>
+
+                <div class="field">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua das Flores, 123">
+                </div>
+
+                <!-- CAMPO TROCADO: URL → Upload com preview -->
+                <div class="field full">
+                    <label>Foto do contato</label>
+                    <div class="preview-container">
+                        <input id="preview-input" class="preview-input" type="file" accept="image/*">
+                        <label class="preview-label" for="preview-input"></label>
+                        <img id="preview-image" class="preview-image" src="https://placehold.co/64x64/e0839a/fff?text=?">
+                    </div>
+                </div>
+
+                <div class="btn-row">
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Salvar Contato">
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <p class="section-title">Lista de contatos</p>
+
+    <section id="lista-contatos"></section>
+
+</body>
+</html>

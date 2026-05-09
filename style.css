@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@500&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #fff7f5;
+  font-family: 'DM Sans', sans-serif;
+  color: #2d1a14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+/* ── Títulos da página ── */
+.page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #b5415a;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: #c4748a;
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #b5415a;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  max-width: 960px;
+  text-align: center; 
+}
+
+/* ── Card do formulário ── */
+.card-form {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  border: 1px solid #f2cdd5;
+  box-shadow: 0 8px 40px rgba(181, 65, 90, 0.07);
+  margin-bottom: 3rem;
+}
+
+.card-form h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #b5415a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #fce8ed;
+}
+
+/* ── Grid do formulário ── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+/* ── Labels e inputs ── */
+label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #c4748a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #f2cdd5;
+  border-radius: 10px;
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  color: #2d1a14;
+  background: #fffbfc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border-color: #e0839a;
+  box-shadow: 0 0 0 3px rgba(224, 131, 154, 0.12);
+}
+
+/* ── Botões do formulário ── */
+.btn-row {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+input[type="reset"] {
+  flex: 1;
+  padding: 11px;
+  border: 1px solid #f2cdd5;
+  border-radius: 10px;
+  background: #fff;
+  color: #b5415a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+input[type="reset"]:hover {
+  background: #fff5f7;
+}
+
+input[type="submit"] {
+  flex: 2;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e0839a 0%, #f5b97e 100%);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ── Lista de contatos ── */
+#lista-contatos {
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* ── Cards de contato ── */
+.card {
+  background: #fff;
+  border: 1px solid #f2cdd5;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 20px rgba(181, 65, 90, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(181, 65, 90, 0.1);
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #e0839a;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d1a14;
+}
+
+.card p {
+  font-size: 12px;
+  color: #c4748a;
+  word-break: break-word;
+}
+
+.card .badge {
+  font-size: 11px;
+  background: #fff5ec;
+  color: #c47a25;
+  border: 1px solid #fad5a5;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-top: 2px;
+}
+
+/* ── Botões do card ── */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.btn-editar,
+.btn-deletar {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid;
+  font-family: 'DM Sans', sans-serif;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-editar {
+  background: #fff5f7;
+  color: #b5415a;
+  border-color: #f2cdd5;
+}
+
+.btn-deletar {
+  background: #fff5ec;
+  color: #c47a25;
+  border-color: #fad5a5;
+}
+
+.btn-editar:hover,
+.btn-deletar:hover {
+  opacity: 0.75;
+  transform: translateY(-1px);
+}
+
+#mensagem {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 999;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+#mensagem.sucesso {
+  background: #d4edda;
+  color: #155724;
+  opacity: 1;
+}
+
+#mensagem.erro {
+  background: #f8d7da;
+  color: #721c24;
+  opacity: 1;
+}
+
+/* ── Estado de carregamento ── */
+.carregando {
+  text-align: center;
+  color: #c4748a;
+  font-size: 13px;
+  grid-column: 1 / -1;
+  padding: 2rem;
+}
+
+/* ── Responsivo ── */
+@media (max-width: 768px) {
+  #lista-contatos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-form {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #lista-contatos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Preview de imagem ── */
+.preview-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.preview-input {
+  display: none;
+}
+
+.preview-label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(181, 65, 90, 0.08);
+  border: 2px dashed #e0839a;
+  transition: background 0.2s;
+}
+
+.preview-label:hover {
+  background: rgba(181, 65, 90, 0.18);
+}
+
+.preview-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2.5px solid #e0839a;
+  display: block;
+}
